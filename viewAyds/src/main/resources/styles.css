@@ -1,0 +1,247 @@
+/* ---- VARIABLES GLOBALES DE COLOR ---- */
+.root-pane {
+    -fx-color-primario: #E84A5F;
+    -fx-color-primario-claro: #FF6B7A;
+    -fx-color-fondo-oscuro: #2D3047;
+    -fx-color-superficie-oscura: #1C1D2A;
+    -fx-color-superficie-hover: #3a3e5c; /* NUEVA VARIABLE para hover y fondos secundarios */
+    -fx-color-texto-claro: #F5F5F5;
+    -fx-color-texto-secundario: #a8a8a8;
+    -fx-color-borde: #4A4E69;
+    -fx-color-accion-modificar: #4CAF50;
+    -fx-color-accion-eliminar: #F44336;
+
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ---- CABECERA (HEADER) ---- */
+.header {
+    -fx-background-color: -fx-color-fondo-oscuro;
+    -fx-border-color: transparent transparent -fx-color-borde transparent;
+    -fx-border-width: 1;
+}
+.header-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.header-logo-icon {
+    -fx-icon-size: 24px;
+    -fx-icon-color: -fx-color-primario;
+}
+.user-name {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.user-icon {
+    -fx-icon-size: 18px;
+    -fx-icon-color: -fx-color-texto-claro;
+}
+
+/* ---- BARRA LATERAL (SIDEBAR) ---- */
+.sidebar {
+    -fx-background-color: -fx-color-fondo-oscuro;
+    -fx-border-color: transparent -fx-color-borde transparent;
+    -fx-border-width: 1;
+}
+.sidebar-button, .sidebar-button-bottom {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-color-texto-secundario;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 5;
+    -fx-padding: 10 15;
+    -fx-graphic-text-gap: 15;
+}
+.sidebar-button .ikonli-font-icon, .sidebar-button-bottom .ikonli-font-icon {
+    -fx-icon-size: 18px;
+    -fx-icon-color: -fx-color-texto-secundario;
+}
+.sidebar-button:hover {
+    -fx-background-color: -fx-color-superficie-hover; /* AHORA USA VARIABLE */
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.sidebar-button:hover .ikonli-font-icon {
+    -fx-icon-color: -fx-color-texto-claro;
+}
+.sidebar-button.active {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.sidebar-button.active .ikonli-font-icon {
+    -fx-icon-color: white;
+}
+.sidebar-button-bottom {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+}
+.sidebar-button-bottom:hover {
+    -fx-background-color: -fx-color-primario-claro;
+}
+
+/* ---- CONTENIDO PRINCIPAL ---- */
+.main-content {
+    -fx-background-color: -fx-color-fondo-oscuro;
+}
+
+/* ---- ESTILOS PARA BÚSQUEDA Y FILTROS ---- */
+.search-field, .filter-combo-box {
+    -fx-background-color: -fx-color-superficie-oscura;
+    -fx-text-fill: -fx-color-texto-claro;
+    -fx-prompt-text-fill: -fx-color-texto-secundario;
+    -fx-border-color: -fx-color-borde;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+}
+.search-field:focused, .filter-combo-box:focused {
+    -fx-border-color: -fx-color-primario;
+}
+.filter-combo-box .list-cell {
+    -fx-background-color: -fx-color-superficie-oscura;
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.filter-combo-box .list-cell:hover {
+    -fx-background-color: -fx-color-superficie-hover; /* AHORA USA VARIABLE */
+}
+.filter-combo-box .list-cell:selected {
+    -fx-background-color: -fx-color-primario;
+}
+
+/* Botón "Ingresar Producto" */
+.ingresar-button {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+.ingresar-button:hover {
+    -fx-background-color: -fx-color-primario-claro;
+}
+
+/* ---- ESTILOS DE LA TABLA (TABLEVIEW) ---- */
+.table-view {
+    -fx-background-color: -fx-color-superficie-oscura;
+    -fx-border-color: -fx-color-borde;
+    -fx-border-radius: 5;
+    -fx-background-insets: 0;
+}
+.table-view .column-header-background {
+    -fx-background-color: -fx-color-superficie-oscura;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent -fx-color-borde transparent;
+    -fx-padding: 12;
+}
+.table-view .column-header .label {
+    -fx-text-fill: -fx-color-texto-claro;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .table-cell {
+    -fx-text-fill: -fx-color-texto-secundario;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent -fx-color-borde transparent;
+    -fx-border-width: 0.5;
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+.table-row-cell {
+    -fx-background-color: -fx-color-superficie-oscura;
+}
+.table-row-cell:odd {
+    -fx-background-color: #222433;
+}
+.table-row-cell:hover {
+    -fx-background-color: -fx-color-superficie-hover; /* AHORA USA VARIABLE */
+}
+.table-row-cell:selected {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+.action-button-modify, .action-button-delete {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 5 15;
+}
+.action-button-modify {
+    -fx-background-color: -fx-color-accion-modificar;
+}
+.action-button-delete {
+    -fx-background-color: -fx-color-accion-eliminar;
+}
+
+/* ======================================================= */
+/* ===         ESTILOS PARA EL DIÁLOGO DE INGRESO        === */
+/* ======================================================= */
+.custom-dialog {
+    -fx-background-color: -fx-color-fondo-oscuro;
+}
+.custom-dialog .header-panel {
+    -fx-background-color: -fx-color-superficie-hover; /* AHORA USA VARIABLE */
+}
+.custom-dialog .header-panel .label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-texto-claro;
+}
+.custom-dialog .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-color-texto-secundario;
+    -fx-font-weight: 500;
+}
+.custom-dialog .text-field,
+.custom-dialog .text-area {
+    -fx-background-color: -fx-color-superficie-oscura;
+    -fx-text-fill: -fx-color-texto-claro;
+    -fx-prompt-text-fill: -fx-color-texto-secundario; /* AHORA USA VARIABLE */
+    -fx-border-color: -fx-color-borde;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+}
+.custom-dialog .text-area .content {
+     -fx-background-color: -fx-color-superficie-oscura;
+}
+.custom-dialog .text-field:focused,
+.custom-dialog .text-area:focused {
+    -fx-border-color: -fx-color-primario;
+    -fx-border-width: 1.5px;
+}
+.custom-dialog .button {
+    -fx-background-color: -fx-color-borde; /* AHORA USA VARIABLE */
+    -fx-text-fill: -fx-color-texto-claro;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20;
+}
+.custom-dialog .button:hover {
+    -fx-background-color: -fx-color-superficie-hover; /* AHORA USA VARIABLE */
+}
+.custom-dialog .button:default {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: white;
+}
+.custom-dialog .button:default:hover {
+    -fx-background-color: -fx-color-primario-claro;
+}
+
+/* VERIFICÁ QUE ESTO EXISTA Y ESTÉ BIEN ESCRITO EN TU CSS */
+.dialog-button-guardar {
+    -fx-background-color: -fx-color-primario;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20;
+}
